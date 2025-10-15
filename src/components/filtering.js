@@ -15,7 +15,7 @@ export function initFiltering(elements) {
         // @todo: #4.2 — обработать очистку поля
         if (action && action.name === 'clear') {
             const field = action.getAttribute('data-field');
-            const parent = action.closest('.filter-field');
+            const parent =  action.parentElement;
             const input = parent.querySelector('input');
             
             if (input) {
